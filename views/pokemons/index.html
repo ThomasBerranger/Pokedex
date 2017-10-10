@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>Pokemons</h2>
+
+    {% for pokemon in pokemons %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a href="/{{pokemon.id}}"> {{pokemon.name}} </a>
+            </div>
+            <div class="panel-body">
+                {{pokemon.description}}
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
